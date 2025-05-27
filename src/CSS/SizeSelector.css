@@ -1,0 +1,15 @@
+.size-selector div {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-selector > label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.size-selector,
+.dough-selector {
+  flex: 1; /* Her biri eşit genişlik alır */
+}

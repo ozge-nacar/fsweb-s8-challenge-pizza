@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #ce2829;
+  padding: 20px 0;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-img {
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 380px;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}

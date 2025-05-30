@@ -1,0 +1,200 @@
+.tasarım {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  height: 70vh;
+  background-color: #faf7f2;
+  gap: 0.5rem;
+}
+
+.tasarım-menu.sol {
+  background-image: url("/images/iteration-2-images/cta/kart-1.png");
+  display: flex;
+  justify-content: flex-start;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  height: 325px;
+  width: 20%;
+  border-radius: 5px;
+  color: #ffff;
+}
+
+.tasarım-menu.sag {
+  display: flex;
+  flex-direction: column;
+  height: 325px;
+  width: 20%;
+}
+
+.menu-style h1 {
+  font-size: 35px;
+  font-style: bold;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: "Roboto";
+  transform: translateY(-30px);
+}
+
+.menu-style p {
+  font-size: 10px;
+  margin-bottom: 1 rem;
+  color: white;
+  font-style: bold;
+  transform: translateY(-30px);
+}
+
+.hackhatlon-menu h2 {
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  padding-top: 20px;
+  transform: translateY(-20px);
+}
+
+.teslimat h2 {
+  font-size: 16px;
+  text-align: left;
+  transform: translateY(-10px);
+}
+
+.btn-siparis {
+  padding: 5px 5px;
+  background-color: white;
+
+  font-size: 8px;
+  border: none;
+  color: #ce2829;
+  border-radius: 10px;
+  transform: translateY(-30px);
+}
+
+.hackhatlon-menu {
+  background-image: url("/images/iteration-2-images/cta/kart-2.png");
+  text-align: left;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 2rem;
+  border-radius: 5px;
+  align-items: center;
+  height: 100%;
+}
+
+.teslimat {
+  background-image: url("/images/iteration-2-images/cta/kart-3.png");
+  text-align: left;
+  gap: 2rem;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tercih {
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-top: -20px;
+  background-color: #faf7f2;
+}
+
+.tercih h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.tercih p {
+  font-family: Satisfy;
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c62828;
+  margin: 0;
+  font-family: 600;
+}
+
+.icons {
+  background-color: #faf7f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn1 {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffffff;
+  flex-wrap: nowrap;
+  border: none;
+  gap: 1rem;
+}
+
+.btn1 img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #faf7f2;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding: 40px;
+}
+
+.duzen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-section {
+  background-color: #ffffff;
+  max-width: 225px;
+}
+
+.menu-container img {
+  width: 225px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.menu-content {
+  padding: 1rem;
+}
+
+.menu-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.point {
+  color: black;
+  font-weight: bold;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,10 @@
+.secenekler {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 2rem;
+  line-height: 2rem;
+  background-color: #ffffff;
+}

@@ -27,6 +27,7 @@ export default function OrderSummary({ selected, count, setCount }) {
       >
         <button
           onClick={decrease}
+          type="button"
           style={{
             backgroundColor: "#FFC107",
             border: "none",
@@ -49,6 +50,7 @@ export default function OrderSummary({ selected, count, setCount }) {
         </div>
         <button
           onClick={increase}
+          type="button"
           style={{
             backgroundColor: "#FFC107",
             border: "none",

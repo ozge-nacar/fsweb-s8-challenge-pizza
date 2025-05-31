@@ -9,31 +9,32 @@ function SuccessPage({ orderData }) {
 
   return (
     <div className="container-success">
-      <div className="success-page">
-        <h1 className="success-title">SİPARİŞ ALINDI!</h1>
+      <div className="page">
+        <h2 class="logo">Teknolojik Yemekler</h2>
+        <p class="subtitle">lezzetin yolda</p>
+        <h1 className="title">SİPARİŞ ALINDI!</h1>
 
         <hr />
         <div className="order-summary">
           <h2>Position Absolute Acı Pizza</h2>
           <p>
-            <strong>Boyut:</strong> {orderData.size}
+            Boyut: <strong>{orderData.size}</strong>
           </p>
           <p>
-            <strong>Hamur:</strong> {orderData.dough}
+            Hamur: <strong>{orderData.dough}</strong>
           </p>
           <p>
-            <strong>Ekstra Malzemeler:</strong> {orderData.extras.join(", ")}
+            Ekstra Malzemeler: <strong>{orderData.extras.join(", ")} </strong>
           </p>
         </div>
+
         <div className="totalSiparis">
           <h3>Sipariş Toplamı</h3>
           <p>
-            <strong>Seçimler:</strong>
+            Seçimler:
             {orderData.extrasTotal}₺
           </p>
-          <p>
-            <strong>Toplam:</strong> {orderData.totalPrice}₺
-          </p>
+          <p>Toplam: {orderData.totalPrice}₺</p>
         </div>
       </div>
 

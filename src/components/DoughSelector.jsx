@@ -35,6 +35,7 @@ function DoughSelector({ dough, setDough }) {
         }}
       >
         <MenuItem value="">Hamur Kalınlığı</MenuItem>
+        <MenuItem value="Süper İnce">Süper İnce</MenuItem>
         <MenuItem value="İnce">İnce</MenuItem>
         <MenuItem value="Normal">Normal</MenuItem>
         <MenuItem value="Kalın">Kalın</MenuItem>

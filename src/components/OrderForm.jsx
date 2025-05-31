@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Box, Grid } from "@mui/material";
 import Header from "./Header";
+import PizzaDetails from "./PizzaDetails";
 import SizeSelector from "./SizeSelector";
 import DoughSelector from "./DoughSelector";
 import ExtraIngredients from "./ExtraIngredients";
 import UserNote from "./UserNote";
-import OrderSummary from "./OrderSummary";
-import PizzaDetails from "./PizzaDetails";
 import NameInput from "./NameInput";
+import OrderSummary from "./OrderSummary";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
@@ -21,11 +21,15 @@ function OrderForm({ setOrderData }) {
 
   const history = useHistory();
 
+  const isFormValid = () => {
+    return name.length >= 3 && size && dough && selected.length >= 3;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (selected.length < 3) {
-      alert("En az 3 malzeme seçmelisiniz.");
+    if (!isFormValid()) {
+      alert("Lütfen tüm alanları doğru doldurun.");
       return;
     }
 
@@ -65,6 +69,7 @@ function OrderForm({ setOrderData }) {
       console.error("HATA: Sipariş gönderilemedi", error);
     }
   };
+
   return (
     <Box>
       <Header />
@@ -74,34 +79,34 @@ function OrderForm({ setOrderData }) {
             maxWidth: "500px",
             mx: "auto",
             my: 4,
-            px: 2,
+            px: { xs: 2, sm: 4 },
             display: "flex",
             flexDirection: "column",
             gap: 6,
           }}
         >
           <PizzaDetails />
-          <Grid container spacing={10} alignItems="flex-start">
-            <Grid item xs={12} md={6}>
-              <Box sx={{ pr: { sm: 3 } }}>
-                <SizeSelector size={size} setSize={setSize} />
-              </Box>
-            </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Box sx={{ pl: { sm: 3 } }}>
-                <DoughSelector dough={dough} setDough={setDough} />
-              </Box>
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6}>
+              <SizeSelector size={size} setSize={setSize} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <DoughSelector dough={dough} setDough={setDough} />
             </Grid>
           </Grid>
+
           <ExtraIngredients selected={selected} setSelected={setSelected} />
           <NameInput name={name} setName={setName} />
           <UserNote note={note} setNote={setNote} />
+
           <hr />
+
           <OrderSummary selected={selected} count={count} setCount={setCount} />
         </Box>
       </form>
     </Box>
   );
 }
+
 export default OrderForm;

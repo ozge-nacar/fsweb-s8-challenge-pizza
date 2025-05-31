@@ -35,7 +35,7 @@ function PizzaOrder() {
               Burger Menü
             </h2>
             <Link to="/orderForm">
-              <button className="btn-siparis">SİPARİŞ VER</button>
+              <button className="btn-siparis1">SİPARİŞ VER</button>
             </Link>
           </div>
 

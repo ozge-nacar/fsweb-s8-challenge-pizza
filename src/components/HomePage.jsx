@@ -15,8 +15,9 @@ function HomePage() {
       <div>
         <PizzaOrder />
       </div>
-
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -45,7 +45,7 @@ function PizzaOrder() {
               npm gibi kurye
             </h2>
             <Link to="/orderForm">
-              <button className="btn-siparis">SİPARİŞ VER</button>
+              <button className="btn-siparis2">SİPARİŞ VER</button>
             </Link>
           </div>
         </section>

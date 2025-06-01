@@ -5,6 +5,7 @@ import OrderForm from "./components/OrderForm";
 import "./components/Header.css";
 import SuccessPage from "./components/SuccessPage";
 import { useState } from "react";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [orderData, setOrderData] = useState(null);
@@ -16,7 +17,7 @@ function App() {
         </Route>
 
         <Route
-          path="/OrderForm"
+          path="/orderForm"
           render={() => (
             <OrderForm orderData={orderData} setOrderData={setOrderData} />
           )}
@@ -26,6 +27,8 @@ function App() {
           path="/success"
           render={() => <SuccessPage orderData={orderData} />}
         />
+
+        <Route path="*" render={() => <NotFound />} />
       </Switch>
     </Router>
   );

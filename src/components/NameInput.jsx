@@ -7,17 +7,18 @@ function NameInput({ name, setName }) {
   return (
     <Box>
       <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 1 }}>
-        Adınız Soyadınız
+        İsim
       </Typography>
 
       <TextField
         fullWidth
         multiline
-        placeholder="Adınızı Giriniz"
+        placeholder="İsim Giriniz"
         value={name}
         onChange={(e) => setName(e.target.value)}
         error={isError}
         helperText={isError ? "İsim en az 3 karakter olmalıdır." : ""}
+        inputProps={{ "data-cy": "nameInput" }}
       />
     </Box>
   );

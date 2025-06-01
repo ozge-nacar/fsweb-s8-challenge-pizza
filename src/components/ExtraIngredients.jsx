@@ -66,6 +66,7 @@ export default function ExtraIngredients({ selected, setSelected }) {
                   checked={selected.includes(ingredient)}
                   onChange={handleChange}
                   color="primary"
+                  data-cy="topping-sucuk"
                 />
               }
               label={

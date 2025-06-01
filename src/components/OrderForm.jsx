@@ -22,7 +22,13 @@ function OrderForm({ setOrderData }) {
   const history = useHistory();
 
   const isFormValid = () => {
-    return name.length >= 3 && size && dough && selected.length >= 3;
+    return (
+      name.trim().length >= 3 &&
+      size &&
+      dough &&
+      selected.length >= 3 &&
+      selected.length <= 10
+    );
   };
 
   const handleSubmit = async (e) => {
@@ -102,7 +108,15 @@ function OrderForm({ setOrderData }) {
 
           <hr />
 
-          <OrderSummary selected={selected} count={count} setCount={setCount} />
+          <OrderSummary
+            selected={selected}
+            count={count}
+            setCount={setCount}
+            size={size}
+            name={name}
+            dough={dough}
+            isFormValid={isFormValid}
+          />
         </Box>
       </form>
     </Box>

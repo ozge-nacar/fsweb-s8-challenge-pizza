@@ -1,11 +1,25 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-export default function OrderSummary({ selected, count, setCount }) {
+export default function OrderSummary({
+  selected,
+  count,
+  setCount,
+  size,
+  dough,
+  name,
+}) {
   const basePrice = 85.5;
   const extraPrice = 5;
   const extrasTotal = selected.length * extraPrice;
   const totalPrice = (basePrice + extrasTotal) * count;
+
+  const isDisabled =
+    !size ||
+    !dough ||
+    selected.length < 3 ||
+    selected.length > 10 ||
+    name.trim().length < 3;
 
   const decrease = () => {
     if (count > 1) setCount(count - 1);
@@ -96,6 +110,8 @@ export default function OrderSummary({ selected, count, setCount }) {
         <Button
           variant="contained"
           type="submit"
+          data-cy="submit-button"
+          disabled={isDisabled}
           fullWidth
           sx={{
             backgroundColor: "#FFC107",
